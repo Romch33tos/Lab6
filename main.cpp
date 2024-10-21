@@ -28,15 +28,15 @@ void getInformation(vector<Flat>& flats) {
 }
 
 void printFlats(vector<Flat>& flats, double minArea) {
-    cout << "\nÊâàðòèðû ñ ïëîùàäüþ áîëüøå " << minArea << ":" << endl;
+    cout << "\nÐšÐ²Ð°Ñ€Ñ‚Ð¸Ñ€Ñ‹ Ñ Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÑŒÑŽ Ð±Ð¾Ð»ÑŒÑˆÐµ " << minArea << ":" << endl;
 
     double minAreaFound = 100;
     int flatIndex = -1;
 
     for (int i = 0; i < flats.size(); i++) {
         if (flats[i].area > minArea) {
-            cout << "Íîìåð êâàðòèðû: " << flats[i].numberOfFlat << ", Âëàäåëåö: " << flats[i].owner
-                 << ", Ïëîùàäü: " << flats[i].area << ", Êîëè÷åñòâî êîìíàò: " << flats[i].numberOfRooms << endl;
+            cout << "ÐÐ¾Ð¼ÐµÑ€ ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€Ñ‹: " << flats[i].numberOfFlat << ", Ð’Ð»Ð°Ð´ÐµÐ»ÐµÑ†: " << flats[i].owner
+                 << ", ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ: " << flats[i].area << ", ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐºÐ¾Ð¼Ð½Ð°Ñ‚: " << flats[i].numberOfRooms << endl;
 
             if (flats[i].area < minAreaFound) {
                 minAreaFound = flats[i].area;
@@ -46,12 +46,12 @@ void printFlats(vector<Flat>& flats, double minArea) {
     }
 
     if (flatIndex != -1) {
-        cout << "\nÊâàðòèðà ñ íàèìåíüøåé ïëîùàäüþ ñðåäè äàííûõ êâàðòèð:" << endl;
-        cout << "Íîìåð êâàðòèðû: " << flats[flatIndex].numberOfFlat << ", Âëàäåëåö: " << flats[flatIndex].owner
-             << ", Ïëîùàäü: " << flats[flatIndex].area << ", Êîëè÷åñòâî êîìíàò: " << flats[flatIndex].numberOfRooms << endl;
+        cout << "\nÐšÐ²Ð°Ñ€Ñ‚Ð¸Ñ€Ð° Ñ Ð½Ð°Ð¸Ð¼ÐµÐ½ÑŒÑˆÐµÐ¹ Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÑŒÑŽ ÑÑ€ÐµÐ´Ð¸ Ð´Ð°Ð½Ð½Ñ‹Ñ… ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€:" << endl;
+        cout << "ÐÐ¾Ð¼ÐµÑ€ ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€Ñ‹: " << flats[flatIndex].numberOfFlat << ", Ð’Ð»Ð°Ð´ÐµÐ»ÐµÑ†: " << flats[flatIndex].owner
+             << ", ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ: " << flats[flatIndex].area << ", ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐºÐ¾Ð¼Ð½Ð°Ñ‚: " << flats[flatIndex].numberOfRooms << endl;
     }
     else {
-        cout << "Òàêèõ êâàðòèð íåò." << endl;
+        cout << "Ð¢Ð°ÐºÐ¸Ñ… ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€ Ð½ÐµÑ‚." << endl;
     }
 }
 
@@ -75,20 +75,20 @@ int main() {
     getInformation(flats);
 
     double minArea;
-    cout << "Ââåäèòå ìèíèìàëüíóþ ïëîùàäü êâàðòèðû: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½ÑƒÑŽ Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÑŒ ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€Ñ‹: ";
     cin >> minArea;
     printFlats(flats, minArea);
 
     int roomCount;
-    cout << "\nÂâåäèòå êîëè÷åñòâî êîìíàò äëÿ ðàñ÷åòà ñðåäíåé ïëîùàäè: ";
+    cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÐºÐ¾Ð¼Ð½Ð°Ñ‚ Ð´Ð»Ñ Ñ€Ð°ÑÑ‡ÐµÑ‚Ð° ÑÑ€ÐµÐ´Ð½ÐµÐ¹ Ð¿Ð»Ð¾Ñ‰Ð°Ð´Ð¸: ";
     cin >> roomCount;
     double averageArea = calculateAverageAreaForRooms(flats, roomCount);
 
     if (averageArea > 0) {
-        cout << "\nÑðåäíÿÿ ïëîùàäü êâàðòèð ñ çàäàííûì êîëè÷åñòâîì êîìíàò: " << averageArea << endl;
+        cout << "\nÐ¡Ñ€ÐµÐ´Ð½ÑÑ Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÑŒ ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€ Ñ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ð¼ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾Ð¼ ÐºÐ¾Ð¼Ð½Ð°Ñ‚: " << averageArea << endl;
     }
     else {
-        cout << "\nÍåò êâàðòèð ñ òàêèì êîëè÷åñòâîì êîìíàò." << endl;
+        cout << "\nÐÐµÑ‚ ÐºÐ²Ð°Ñ€Ñ‚Ð¸Ñ€ Ñ Ñ‚Ð°ÐºÐ¸Ð¼ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾Ð¼ ÐºÐ¾Ð¼Ð½Ð°Ñ‚." << endl;
     }
     return 0;
 }
